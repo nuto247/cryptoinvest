@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AllController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 
@@ -15,6 +16,25 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('test', function () {
+
+    Artisan::call('investments:update');
+
+});
+
+Route::get('dddd', function () {
+
+    // Define the base amount and the percentage
+    $baseAmount = 100;
+    $percentage = 20;
+
+    // Calculate the amount of the percentage
+    $percentageAmount = $baseAmount * ($percentage / 100);
+
+    // Output the result
+    echo "The amount of $percentage% of $$baseAmount is $$percentageAmount.";
+
+});
 
 Route::get('/', function () {
     return view('welcome');
@@ -58,7 +78,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 Auth::routes();
 

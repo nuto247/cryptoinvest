@@ -9,12 +9,12 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="custom-card mb-3">
-                   
+
                         <div>
                            <h2>All Transactions</h2>
                         </div>
-                       
-       
+
+
                 </div>
             </div>
             <div class="col-md-4">
@@ -33,25 +33,25 @@
                     <div class="card-body">
                         <table class="table table-striped">
                             <thead>
-                            
-                             
+
+
                                 <tr>
                                           <th scope="col">Transaction Type</th>
                                     <th scope="col">Investment Plan</th>
-                              
+
                                     <th scope="col">Amount</th>
                                     <th scope="col">Status</th>
-                           
+
                                 </tr>
-                             
+
                             </thead>
                             <tbody>
 
                             @foreach($transactions as $transaction)
                                 <tr>
                                     <th scope="row">{{ $transaction->investment_type }}</td>
-                                    <td>{{ $transaction->investment_plan }}</td>
-                       
+                                    <td>{{ $transaction->plan?->name }}</td>
+
                                     <td>{{ $transaction->investment_amount }}</td>
                                     <td>{{ $transaction->status }}</td>
 

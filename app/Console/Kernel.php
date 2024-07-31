@@ -13,6 +13,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         // $schedule->command('inspire')->hourly();
+        //$schedule->command('investments:update')->everyMinute();
+
         $schedule->command('investments:update')->everyMinute();
     }
 
@@ -26,5 +28,5 @@ class Kernel extends ConsoleKernel
         require base_path('routes/console.php');
     }
 
-    
+
 }

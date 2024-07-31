@@ -129,14 +129,18 @@
 
                             <input type="hidden" class="form-control"  name="transtype" value="Investment">
                             <input type="hidden" class="form-control"  name="status" value="Pending">
-                        
+
                             <div class="form-group">
                                 <label for="investmentPlan">Select Investment Plan</label>
                                 <select class="form-control" id="investmentPlan" name="investment_plan">
+                                    @foreach (P as )
+
+                                    @endforeach
                                     <option>Bronze Plan-|15 Days|8.6% Profit Daily|Min deposit-$100-Max deposit-$2,000|</option>
                                     <option>Silver Plan-|21 Days|10.8% Profit Daily|Min deposit-$1,000-Max deposit-$4,900|</option>
                                     <option>Gold Plan-|30 days|12.6% Profit Daily|Min deposit-$5,000-Max deposit-$10,000|</option>
                                     <option>Platinum Plan-|15 Days|15.6% Profit Daily|Min deposit-$10,000-Max deposit-$200,000|</option>
+
                                 </select>
                             </div>
                             <div class="form-group">
@@ -217,7 +221,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- JavaScript for BTC Conversion -->
-  
+
 
     <!-- JavaScript for Form Redirection -->
 
